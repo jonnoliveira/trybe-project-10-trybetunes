@@ -51,7 +51,7 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     }, () => {
-      this.btnLoginValidation();
+      this.btnLoginValidationSearch();
     });
   };
 
@@ -61,7 +61,6 @@ class App extends React.Component {
       isDisable,
       isLoading,
       isClicked,
-      userName,
     } = this.state;
 
     return (
@@ -71,14 +70,7 @@ class App extends React.Component {
           <Route exact path="/profile/edit" component={ ProfileEdit } />
           <Route exact path="/profile" component={ Profile } />
           <Route exact path="/album/:id" component={ Album } />
-          <Route
-            exact
-            path="/search"
-            render={ () => (
-              <Search
-                userName={ userName }
-              />) }
-          />
+          <Route exact path="/search" component={ Search } />
           <Route exact path="/favorites" component={ Favorites } />
           <Route
             exact
