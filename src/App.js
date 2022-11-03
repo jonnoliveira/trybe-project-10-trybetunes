@@ -51,7 +51,7 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     }, () => {
-      this.btnLoginValidationSearch();
+      this.btnLoginValidation();
     });
   };
 
