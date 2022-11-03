@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 export default class Login extends Component {
   render() {
