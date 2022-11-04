@@ -6,21 +6,24 @@ import PropTypes from 'prop-types';
 export default class CardAlbums extends Component {
   render() {
     const { album } = this.props;
-    const { collectionId, artworkUrl100, collectionName, trackCount } = album;
+    const { collectionId, artworkUrl100, collectionName, trackCount, artistName } = album;
     return (
       <div>
         <Link
           to={ `/album/${collectionId}` }
           data-testid={ `link-to-album-${collectionId}` }
-        />
-        <img src={ artworkUrl100 } alt={ collectionName } />
-        <h3>
-          { collectionName }
-        </h3>
-        <p>
-          Músicas no álbum:
-          { trackCount }
-        </p>
+        >
+          <img src={ artworkUrl100 } alt={ collectionName } />
+          <h3>
+            { `Álbum: ${collectionName}`}
+          </h3>
+          <p>
+            { `Musícas no álbum: ${trackCount}`}
+          </p>
+        </Link>
+        <h4>
+          { `Artista: ${artistName}`}
+        </h4>
       </div>
     );
   }
