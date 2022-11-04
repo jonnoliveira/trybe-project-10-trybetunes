@@ -106,9 +106,11 @@ export default class Search extends Component {
                 <h3>
                   { `Resultado de álbuns de: ${artist}`}
                 </h3>
-                { albumList.map((album) => (
-                  <CardAlbums key={ album.collectionId } album={ album } />
-                ))}
+                <ul>
+                  { albumList.map((album) => (
+                    <CardAlbums key={ album.collectionId } album={ album } />
+                  ))}
+                </ul>
               </div>
             )
         }
