@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loading from './Loading';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 export default class CardMusic extends Component {
   state = {
     isLoading: false,
     isChecked: false,
   };
+
+  async componentDidMount() {
+    this.setState({ isLoading: true }, async () => {
+      const favoritesMusics = await getFavoriteSongs();
+      const { music } = this.props;
+
+      favoritesMusics.filter((fMusic) => (
+        fMusic.trackId === music.trackId && this.setState({
+          isChecked: true })));
+      this.setState({ isLoading: false });
+    });
+  }
 
   onChangeHandler = ({ target }) => {
     const { checked } = target;
@@ -16,10 +28,8 @@ export default class CardMusic extends Component {
       isChecked: checked,
     }, async () => {
       const { music } = this.props;
-      const trackId = target.parentNode.parentNode.children[2].children[0].id;
-      const favMusic = music[trackId];
 
-      await addSong(favMusic);
+      await addSong(music);
       this.setState({
         isLoading: false,
       });
