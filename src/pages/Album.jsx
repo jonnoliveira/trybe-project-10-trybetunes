@@ -33,7 +33,11 @@ export default class Album extends Component {
   };
 
   render() {
-    const { musicsList, isLoading, albumName, artistName, urlAlbum } = this.state;
+    const { musicsList,
+      isLoading,
+      albumName,
+      artistName,
+      urlAlbum } = this.state;
 
     return (
       <div data-testid="page-album">
@@ -53,7 +57,10 @@ export default class Album extends Component {
                 </div>
                 <ul>
                   { musicsList.slice(1).map((music) => (
-                    <CardMusic key={ music.trackNumber } music={ music } />)) }
+                    <CardMusic
+                      key={ music.trackNumber }
+                      music={ music }
+                    />)) }
                 </ul>
               </section>
             )
