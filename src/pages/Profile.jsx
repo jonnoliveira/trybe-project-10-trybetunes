@@ -54,18 +54,16 @@ export default class Profile extends Component {
                   <h3>Descrição</h3>
                   <p>{ userDescription }</p>
                 </div>
-                <nav>
-                  <ul>
-                    <li>
-                      <Link
-                        data-testid="link-to-profile-edit"
-                        to="/profile/edit"
-                      >
-                        Editar perfil
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
+                <button
+                  type="button"
+                  data-testid="link-to-profile-edit"
+                >
+                  <Link
+                    to="/profile/edit"
+                  >
+                    Editar perfil
+                  </Link>
+                </button>
               </section>
             )
         }
