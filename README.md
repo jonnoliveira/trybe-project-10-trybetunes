@@ -1,13 +1,89 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# PROJETO 10 - TRYBETUNES :computer:
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+## Esse projeto pertence ao módulo de `front-end` do curso da [Trybe](https://www.betrybe.com/) :green_heart:
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## :construction: CSS em aprimoramento :construction:
+ 
+<details>
+ 
+<summary>
+  
+## 1- Resumo
+  
+</summary>
+
+No projeto TrybeTunes, além da componentização, tive a oportunidade de trabalhar com o ciclo de vida dos componentes React e com a criação de novas rotas para as páginas da aplicação utilizando o React Router. Com isso feito é possível pesquisar e listar álbuns e músicas de diversas bandas e artistas. Até mesmo ouvir a prévia de cada música e favoritar suas músicas favoritas. Veja mais abaixo!
+
+</details>
+
+#
+
+<details>
+ 
+<summary>
+ 
+## 2- Requisitos
+
+</summary>
+
+### I. Crie as rotas necessárias para a aplicação
+
+### II. Crie um formulário para identificação
+
+### III. Crie um componente de cabeçalho
+
+### IV. Crie os links de navegação no cabeçalho
+
+### V. Crie o formulário para pesquisar artistas
+
+### VI. Faça a requisição para pesquisar artistas
+
+### VII. Crie a lista de músicas do álbum selecionado
+
+### VIII. Crie o mecanismo para adicionar músicas na lista de músicas favoritas
+
+### IX. Faça a requisição para recuperar as músicas favoritas ao entrar na página do Álbum
+
+### X. Faça a requisição para recuperar as músicas favoritas e atualizar a lista após favoritar uma música
+
+### XI. Crie o mecanismo para remover músicas na lista de músicas favoritas
+---
+
+## Requisitos bônus
+
+###XII. Crie a lista de músicas favoritas
+
+###XIII. Crie a exibição de perfil
+
+###XIV. Crie o formulário de edição de perfil
+
+</details>
+
+# 
+
+<details>
+ 
+<summary>
+
+## 3- Nota do Projeto
+ 
+</summary>
+
+## 100% :heavy_check_mark:
+
+![Project-Trybetuns-Grade]()
+
+</details> 
+ 
+# 
+
+<details>
+ 
+<summary>
+
+## 4- Preview
+
+</summary>
+
+  
+</details>
