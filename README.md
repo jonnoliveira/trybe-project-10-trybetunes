@@ -71,7 +71,7 @@ No projeto TrybeTunes, além da componentização, tive a oportunidade de trabal
 
 ## 100% :heavy_check_mark:
 
-![Project-Trybetuns-Grade]()
+![Project-Trybetuns-Grade](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/trybetunes-grade.png)
 
 </details> 
  
