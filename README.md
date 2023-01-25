@@ -51,11 +51,11 @@ No projeto TrybeTunes, além da componentização, tive a oportunidade de trabal
 
 ## Requisitos bônus
 
-###XII. Crie a lista de músicas favoritas
+### XII. Crie a lista de músicas favoritas
 
-###XIII. Crie a exibição de perfil
+### XIII. Crie a exibição de perfil
 
-###XIV. Crie o formulário de edição de perfil
+### XIV. Crie o formulário de edição de perfil
 
 </details>
 
