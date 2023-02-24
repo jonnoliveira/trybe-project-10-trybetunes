@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/trybe-project-10-trybetunes/static/css/main.a5cee5a7.css",
-    "main.js": "/trybe-project-10-trybetunes/static/js/main.64f12a49.js",
-    "static/media/icon-music.svg": "/trybe-project-10-trybetunes/static/media/icon-music.ff6d8fae64894356a9055f401c15c1f1.svg",
-    "static/media/edit.svg": "/trybe-project-10-trybetunes/static/media/edit.43f02113067c9f8fd2391f20c21d81e4.svg",
-    "index.html": "/trybe-project-10-trybetunes/index.html",
-    "static/media/profile.svg": "/trybe-project-10-trybetunes/static/media/profile.02abec3f372a44f731ce9da1ae7260d0.svg",
-    "static/media/icon-artist.svg": "/trybe-project-10-trybetunes/static/media/icon-artist.97bd0ddd759228194d6d586d3edf797f.svg",
-    "static/media/favorite.svg": "/trybe-project-10-trybetunes/static/media/favorite.e0d93da8bae31a8af0c0979548fc30be.svg",
-    "static/media/lupa.svg": "/trybe-project-10-trybetunes/static/media/lupa.cc6d0b7f702b1912c8248e4518beecd4.svg",
-    "main.a5cee5a7.css.map": "/trybe-project-10-trybetunes/static/css/main.a5cee5a7.css.map",
-    "main.64f12a49.js.map": "/trybe-project-10-trybetunes/static/js/main.64f12a49.js.map"
+    "main.css": "/static/css/main.a5cee5a7.css",
+    "main.js": "/static/js/main.aad511e9.js",
+    "static/media/icon-music.svg": "/static/media/icon-music.ff6d8fae64894356a9055f401c15c1f1.svg",
+    "static/media/edit.svg": "/static/media/edit.43f02113067c9f8fd2391f20c21d81e4.svg",
+    "static/media/profile.svg": "/static/media/profile.02abec3f372a44f731ce9da1ae7260d0.svg",
+    "static/media/icon-artist.svg": "/static/media/icon-artist.97bd0ddd759228194d6d586d3edf797f.svg",
+    "index.html": "/index.html",
+    "static/media/favorite.svg": "/static/media/favorite.e0d93da8bae31a8af0c0979548fc30be.svg",
+    "static/media/lupa.svg": "/static/media/lupa.cc6d0b7f702b1912c8248e4518beecd4.svg",
+    "main.a5cee5a7.css.map": "/static/css/main.a5cee5a7.css.map",
+    "main.aad511e9.js.map": "/static/js/main.aad511e9.js.map"
   },
   "entrypoints": [
     "static/css/main.a5cee5a7.css",
-    "static/js/main.64f12a49.js"
+    "static/js/main.aad511e9.js"
   ]
 }
