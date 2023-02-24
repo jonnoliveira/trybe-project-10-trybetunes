@@ -95,7 +95,12 @@ export default class ProfileEdit extends Component {
         <Header />
         {
           isLoading === true
-            ? <Loading />
+            ? 
+              (
+                <div className='loading'>
+                  <Loading />
+                </div>
+              )
             : (
               <div className='profileEdit-items-container'>
                 <form className='profileEdit-items'>

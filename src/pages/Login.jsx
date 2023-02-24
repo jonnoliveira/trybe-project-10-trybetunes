@@ -44,7 +44,15 @@ export default class Login extends Component {
             Entrar
           </button>
         </form>
-        {isLoading && (<Loading />)}
+        {
+          isLoading
+            &&
+            (
+              <div className='login-loading'>
+                <Loading />
+              </div>
+            )
+        }
         {(isLoading === false && isClicked) && (<Redirect to="/search" />)}
       </div>
     );

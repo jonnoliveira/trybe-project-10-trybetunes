@@ -43,7 +43,12 @@ export default class Profile extends Component {
         <Header />
         {
           isLoading === true
-            ? <Loading />
+            ? 
+              (
+                <div className='loading'>
+                  <Loading />
+                </div>
+              )
             : (
               <section className='profile-items-container'>
                 <div className='profile-info-container'>

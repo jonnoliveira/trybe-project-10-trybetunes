@@ -46,7 +46,12 @@ export default class Album extends Component {
         <Header />
         {
           isLoading === true
-            ? <Loading />
+            ? 
+              (
+                <div className='loading'>
+                  <Loading />
+                </div>
+              )
             : (
               <section className='album-musics-container'>
                 <div className='album-artist-image-container'>

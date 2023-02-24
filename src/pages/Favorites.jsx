@@ -40,7 +40,12 @@ export default class Favorites extends Component {
         <Header />
         {
           isLoading === true
-            ? <Loading />
+            ? 
+            (
+              <div className='loading'>
+                <Loading />
+              </div>
+            )
             : (
               <ul className='favorites-list'>
                 { musicsList.map((music) => (

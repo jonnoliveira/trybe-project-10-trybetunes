@@ -92,7 +92,12 @@ export default class Search extends Component {
         </div>
         {
           isLoading === true
-            && <Loading />
+            &&
+            (
+              <div className='loading'>
+                <Loading />
+              </div>
+            )
         }
         {
           (isLoading === false && albumList.length === 0)
