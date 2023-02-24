@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Album from './pages/Album';
@@ -72,40 +72,38 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route
-            exact
-            path="/album/:id"
-            render={ (props) => (
-              <Album { ...props } />) }
-          />
-          <Route exact path="/profile/edit" component={ ProfileEdit } />
-          <Route exact path="/favorites" component={ Favorites } />
-          <Route exact path="/profile" component={ Profile } />
-          <Route exact path="/search" component={ Search } />
-          <Route
-            exact
-            path="/"
-            >
-              {
-                login
-                  ? <Redirect to="/search" />
-                  : (
-                      <Login
-                        inputNameValue={ inputNameValue }
-                        isDisable={ isDisable }
-                        onChangeHandler={ this.onChangeHandler }
-                        requestApi={ this.requestApi }
-                        isLoading={ isLoading }
-                        isClicked={ isClicked }
-                      />
-                    ) 
-              }
-          </Route>
-          <Route exact path="*" component={ NotFound } />
-        </Switch>
-      </BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/album/:id"
+          render={ (props) => (
+            <Album { ...props } />) }
+        />
+        <Route exact path="/profile/edit" component={ ProfileEdit } />
+        <Route exact path="/favorites" component={ Favorites } />
+        <Route exact path="/profile" component={ Profile } />
+        <Route exact path="/search" component={ Search } />
+        <Route
+          exact
+          path="/"
+          >
+            {
+              login
+                ? <Redirect to="/search" />
+                : (
+                    <Login
+                      inputNameValue={ inputNameValue }
+                      isDisable={ isDisable }
+                      onChangeHandler={ this.onChangeHandler }
+                      requestApi={ this.requestApi }
+                      isLoading={ isLoading }
+                      isClicked={ isClicked }
+                    />
+                  ) 
+            }
+        </Route>
+        <Route exact path="*" component={ NotFound } />
+      </Switch>
     );
   }
 }
