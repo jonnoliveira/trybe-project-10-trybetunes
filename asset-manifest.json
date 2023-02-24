@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/trybe-project-10-trybetunes/static/css/main.197196e9.css",
+    "main.js": "/trybe-project-10-trybetunes/static/js/main.3a212529.js",
+    "static/media/icon-music.svg": "/trybe-project-10-trybetunes/static/media/icon-music.ff6d8fae64894356a9055f401c15c1f1.svg",
+    "static/media/edit.svg": "/trybe-project-10-trybetunes/static/media/edit.43f02113067c9f8fd2391f20c21d81e4.svg",
+    "index.html": "/trybe-project-10-trybetunes/index.html",
+    "static/media/profile.svg": "/trybe-project-10-trybetunes/static/media/profile.02abec3f372a44f731ce9da1ae7260d0.svg",
+    "static/media/icon-artist.svg": "/trybe-project-10-trybetunes/static/media/icon-artist.97bd0ddd759228194d6d586d3edf797f.svg",
+    "static/media/favorite.svg": "/trybe-project-10-trybetunes/static/media/favorite.e0d93da8bae31a8af0c0979548fc30be.svg",
+    "static/media/lupa.svg": "/trybe-project-10-trybetunes/static/media/lupa.cc6d0b7f702b1912c8248e4518beecd4.svg",
+    "main.197196e9.css.map": "/trybe-project-10-trybetunes/static/css/main.197196e9.css.map",
+    "main.3a212529.js.map": "/trybe-project-10-trybetunes/static/js/main.3a212529.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.197196e9.css",
+    "static/js/main.3a212529.js"
+  ]
+}
