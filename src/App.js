@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Album from './pages/Album';
@@ -16,6 +16,7 @@ class App extends React.Component {
     isDisable: true,
     isLoading: false,
     isClicked: false,
+    login: false,
   };
 
   btnLoginValidation = () => {
@@ -41,7 +42,10 @@ class App extends React.Component {
     const userName = await createUser({ name: inputNameValue });
 
     if (userName) {
-      this.setState({ isLoading: false });
+      this.setState({
+        isLoading: false,
+        login: true,
+      });
     }
   };
 
@@ -64,6 +68,7 @@ class App extends React.Component {
       isDisable,
       isLoading,
       isClicked,
+      login,
     } = this.state;
 
     return (
@@ -82,16 +87,22 @@ class App extends React.Component {
           <Route
             exact
             path="/"
-            render={ () => (
-              <Login
-                inputNameValue={ inputNameValue }
-                isDisable={ isDisable }
-                onChangeHandler={ this.onChangeHandler }
-                requestApi={ this.requestApi }
-                isLoading={ isLoading }
-                isClicked={ isClicked }
-              />) }
-          />
+            >
+              {
+                login
+                  ? <Redirect to="/search" />
+                  : (
+                      <Login
+                        inputNameValue={ inputNameValue }
+                        isDisable={ isDisable }
+                        onChangeHandler={ this.onChangeHandler }
+                        requestApi={ this.requestApi }
+                        isLoading={ isLoading }
+                        isClicked={ isClicked }
+                      />
+                    ) 
+              }
+          </Route>
           <Route exact path="*" component={ NotFound } />
         </Switch>
       </BrowserRouter>

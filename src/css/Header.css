@@ -51,3 +51,13 @@
 .header-link img {
   width: 15px;
 }
+
+.header-loading-container {
+  height: 30px;
+}
+
+.header-loading {
+  position: absolute;
+  top: 2vw;
+  left:40vw
+}

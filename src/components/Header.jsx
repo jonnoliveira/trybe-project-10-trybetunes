@@ -31,45 +31,46 @@ export default class Header extends Component {
 
     return (
       <header data-testid="header-component" className='header-container'>
-        {
-          isLoading === true
-            ? <Loading />
-            : (
-              <div data-testid="header-user-name" className='header-name'>
-                <div className='header-user-image-container'>
-                  <img src={ userURL } alt="User icon" />
-                  <p>
-                    { userName }
-                  </p>
-                </div>
-                <nav className='header-nav'>
-                  <ul className='header-list'>
-                    <li>
-                      <Link data-testid="link-to-search" to="/search" className='header-link'>
-                        <img src={ lupa } alt="lupa icon" />
-                        <p>Search</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        data-testid="link-to-favorites"
-                        to="/favorites"
-                        className='header-link'
-                      >
-                        <img src={ favorite } alt="favorite icon" />
-                        <p>Favorites</p> 
-                      </Link>
-                    </li>
-                    <li>
-                      <Link data-testid="link-to-profile" to="/profile" className='header-link'>
-                        <img src={ profile } alt="profile icon" />
-                        <p>Profile</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>)
-        }
+        <div data-testid="header-user-name" className='header-name'>
+          <div className='header-loading-container'>
+            {
+              isLoading === true
+                ? <div className='header-loading'><Loading /></div>
+                : (
+                    <div className='header-user-image-container'>
+                      <img src={ userURL } alt="User icon" />
+                      <p> { userName } </p>
+                    </div>
+                  )
+            }
+          </div>
+          <nav className='header-nav'>
+            <ul className='header-list'>
+              <li>
+                <Link data-testid="link-to-search" to="/search" className='header-link'>
+                  <img src={ lupa } alt="lupa icon" />
+                  <p>Search</p>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  data-testid="link-to-favorites"
+                  to="/favorites"
+                  className='header-link'
+                >
+                  <img src={ favorite } alt="favorite icon" />
+                  <p>Favorites</p> 
+                </Link>
+              </li>
+              <li>
+                <Link data-testid="link-to-profile" to="/profile" className='header-link'>
+                  <img src={ profile } alt="profile icon" />
+                  <p>Profile</p>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
     );
   }
