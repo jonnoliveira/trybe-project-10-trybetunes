@@ -1,0 +1,36 @@
+.cardAlbum-container {
+  background-color: rgb(53, 51, 51);
+  border-radius: 15px;
+  width: 100%;
+  padding: 2vh;
+  margin-bottom: 2vh;
+}
+
+.cardAlbum-link-container {
+  display: flex;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.712);
+  align-items: center;
+}
+
+.image-title-cardAlbum {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.image-title-cardAlbum img {
+  filter: drop-shadow(0 0 0.35rem black);
+}
+
+.image-title-cardAlbum  h3 {
+  font-size: 0.7em;
+  padding-top: 1vh;
+}
+
+.cardAlbum-link-container p {
+  font-size: 0.9em;
+}

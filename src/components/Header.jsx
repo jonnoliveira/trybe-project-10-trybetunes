@@ -10,6 +10,7 @@ import '../css/Header.css';
 export default class Header extends Component {
   state = {
     userName: '',
+    userURL: '',
     isLoading: false,
   };
 
@@ -20,12 +21,13 @@ export default class Header extends Component {
 
     this.setState({
       userName: userObject.name,
+      userURL: userObject.image,
       isLoading: false,
     });
   }
 
   render() {
-    const { userName, isLoading } = this.state;
+    const { userName, userURL, isLoading } = this.state;
 
     return (
       <header data-testid="header-component" className='header-container'>
@@ -34,9 +36,12 @@ export default class Header extends Component {
             ? <Loading />
             : (
               <div data-testid="header-user-name" className='header-name'>
-                <p>
-                  { userName }
-                </p>
+                <div className='header-user-image-container'>
+                  <img src={ userURL } alt="User icon" />
+                  <p>
+                    { userName }
+                  </p>
+                </div>
                 <nav className='header-nav'>
                   <ul className='header-list'>
                     <li>

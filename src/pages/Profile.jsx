@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
+import '../css/Profile.css';
 
 export default class Profile extends Component {
   constructor() {
@@ -38,32 +39,38 @@ export default class Profile extends Component {
       userUrl,
       userDescription } = this.state;
     return (
-      <div data-testid="page-profile">
+      <div data-testid="page-profile" className='profile-container'>
         <Header />
         {
           isLoading === true
             ? <Loading />
             : (
-              <section>
-                <div>
+              <section className='profile-items-container'>
+                <div className='profile-info-container'>
                   <img src={ userUrl } alt={ userName } data-testid="profile-image" />
-                  <h3>Nome</h3>
-                  <p>{ userName }</p>
-                  <h3>Email</h3>
-                  <p>{ userEmail }</p>
-                  <h3>Descrição</h3>
-                  <p>{ userDescription }</p>
-                </div>
-                <button
-                  type="button"
-                  data-testid="link-to-profile-edit"
-                >
-                  <Link
-                    to="/profile/edit"
+                  <div className='profile-info'>
+                    <h3>Nome:</h3>
+                    <p>{ userName }</p>
+                  </div>
+                  <div className='profile-info'>
+                    <h3>Email:</h3>
+                    <p>{ userEmail }</p>
+                  </div>
+                  <div className='profile-info-description'>
+                    <h3>Descrição</h3>
+                    <p>{ userDescription }</p>
+                  </div>
+                  <button
+                    type="button"
+                    data-testid="link-to-profile-edit"
                   >
-                    Editar perfil
-                  </Link>
-                </button>
+                    <Link
+                      to="/profile/edit"
+                    >
+                      Editar perfil
+                    </Link>
+                  </button>
+                </div>
               </section>
             )
         }

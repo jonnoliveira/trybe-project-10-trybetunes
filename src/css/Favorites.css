@@ -1,0 +1,9 @@
+.favorites-container {
+  background-color: rgb(26, 25, 25);
+  min-height: 100vh;
+}
+
+.favorites-list {
+  padding: 2vh;
+  color: rgba(255, 255, 255, 0.712);
+}

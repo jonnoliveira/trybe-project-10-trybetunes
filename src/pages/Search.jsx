@@ -65,7 +65,7 @@ export default class Search extends Component {
     } = this.state;
 
     return (
-      <div data-testid="page-search" >
+      <div data-testid="page-search" className='page-search'>
         <Header />
         <div className='container-search'>
           <form action="" className='forms-search'>
@@ -80,7 +80,7 @@ export default class Search extends Component {
               placeholder='NOME DO ARTISTA'
             />
             <button
-              type="submit"
+              type="button"
               disabled={ isDisabledSearch }
               onClick={ this.searchBtn }
               data-testid="search-artist-button"
@@ -97,9 +97,10 @@ export default class Search extends Component {
         {
           (isLoading === false && albumList.length === 0)
           && (
-            <div>
+            <div className='container-search-notFound'>
+              <img src="https://cdn-icons-png.flaticon.com/512/6665/6665325.png" alt="Error icon" />
               <h3>
-                Nenhum álbum foi encontrado
+                Desculpe! Nenhum álbum foi encontrado.
               </h3>
             </div>
           )
@@ -107,11 +108,11 @@ export default class Search extends Component {
         {
           (isLoading === false && albumList.length > 0)
             && (
-              <div>
-                <h3>
-                  { `Resultado de álbuns de: ${artist}`}
+              <div className="container-search-found">
+                <h3 className="search-found-artist">
+                  { `Artista: ${artist}`}
                 </h3>
-                <ul>
+                <ul className='search-found-list'>
                   { albumList.map((album) => (
                     <CardAlbums key={ album.collectionId } album={ album } />
                   ))}

@@ -1,0 +1,81 @@
+.cardMusic-container {
+  padding: 1vh;
+}
+
+.cardMusic-icon-trackname-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh;
+}
+
+.icon-trackname-container {
+  display: flex;
+  font-size: 0.8em;
+}
+
+.icon-trackname-container img {
+  width: 20px;
+  margin-right: 1vh;
+}
+
+.cardMusic-audio {
+  width: 95%;
+}
+
+.cardMusic-list-container {
+  list-style: none;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+  border-bottom: 1px solid grey;
+}
+
+.custom-checkbox .checkbox-heart {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  outline: none;
+  transform: rotate(45deg);
+  position: relative;
+  border: 1px solid transparent;
+  -webkit-appearance: none;
+}
+
+.checkbox-heart {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  outline: none;
+  transform: rotate(45deg);
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.checkbox-heart:before {
+  position: absolute;
+  content: '';
+  background-color: white;
+  height: 70%;
+  width: 110%; 
+  top: -65%; 
+  left: -5%;
+  border-radius: 75px 75px 0 0;
+}
+
+.checkbox-heart:after {
+  position: absolute;
+  content: '';
+  background-color: white;
+  height: 70%;
+  width: 110%;
+  transform: rotate(-90deg);
+  border-radius: 75px 75px 0 0;
+  top: 16%;
+  right: 75%;
+}
+
+.checkbox-heart:checked,
+.checkbox-heart:checked:before,
+.checkbox-heart:checked:after  {
+  background-color: rgb(165, 6, 6);
+}

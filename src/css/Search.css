@@ -1,3 +1,8 @@
+.page-search {
+  background-color: rgb(26, 25, 25);
+  min-height: 100vh;
+}
+
 .container-search {
   background-color: black;
   height: 12vh;
@@ -42,4 +47,52 @@
 
 .search-btn:disabled {
   background-color: rgb(34, 33, 36);
+}
+
+.container-search-notFound {
+  padding: 2vh;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-search-notFound img {
+  width: 70px;
+  filter: drop-shadow(0 0 0.25rem #a000d2);
+}
+
+.container-search-notFound h3{
+  color: rgba(255, 255, 255, 0.712);
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.container-search-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2vh;
+}
+
+.container-search-found .search-found-artist {
+  color: rgba(255, 255, 255, 0.712);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2vh;
+  border-bottom: 1px solid grey;
+}
+
+.search-found-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-found-list li {
+  list-style: none;
 }

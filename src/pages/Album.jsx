@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import Loading from '../components/Loading';
 import CardMusic from '../components/CardMusic';
+import iconArtist from '../helpers/icon-artist.svg';
+import '../css/Album.css';
 
 export default class Album extends Component {
   state = {
@@ -40,22 +42,27 @@ export default class Album extends Component {
       urlAlbum } = this.state;
 
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className='album-container'>
         <Header />
         {
           isLoading === true
             ? <Loading />
             : (
-              <section>
-                <div>
-                  <img
-                    src={ urlAlbum }
-                    alt={ albumName }
-                  />
-                  <h3 data-testid="album-name">{ albumName }</h3>
-                  <h4 data-testid="artist-name">{ artistName }</h4>
+              <section className='album-musics-container'>
+                <div className='album-artist-image-container'>
+                  <div className='image-album-container'>
+                    <img
+                      src={ urlAlbum }
+                      alt={ albumName }
+                    />
+                    <h3 data-testid="album-name">{ albumName }</h3>
+                  </div>
+                  <div className='icon-artist-container'>
+                    <img src={ iconArtist } alt="" />
+                    <h4 data-testid="artist-name">{ artistName }</h4>
+                  </div>
                 </div>
-                <ul>
+                <ul className='album-music-list'>
                   { musicsList.slice(1).map((music) => (
                     <CardMusic
                       key={ music.trackNumber }

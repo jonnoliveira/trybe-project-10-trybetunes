@@ -11,6 +11,19 @@
   justify-content: center;
 }
 
+.header-user-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-user-image-container img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 4vh;
+}
+
 .header-name {
   text-align: center;
   text-transform: uppercase;

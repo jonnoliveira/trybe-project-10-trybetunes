@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loading from './Loading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import iconMusic from '../helpers/icon-music.svg';
+import '../css/CardMusic.css';
 
 export default class CardMusic extends Component {
   state = {
@@ -13,22 +15,21 @@ export default class CardMusic extends Component {
     this.favoriteMusics();
   }
 
-  favoriteMusics = () => {
-    this.setState({ isLoading: true }, async () => {
+  favoriteMusics = async () => {
+    // this.setState({ isLoading: true }, async () => {
       const favoritesMusics = await getFavoriteSongs();
       const { music } = this.props;
 
       favoritesMusics.filter((fMusic) => (
         fMusic.trackId === music.trackId && this.setState({
           isChecked: true })));
-      this.setState({ isLoading: false });
-    });
+      // this.setState({ isLoading: false });
+    // });
   };
 
   onChangeHandler = ({ target }) => {
     const { checked } = target;
     this.setState({
-      isLoading: true,
       isChecked: checked,
     }, async () => {
       const { music } = this.props;
@@ -36,14 +37,9 @@ export default class CardMusic extends Component {
 
       if (isChecked) {
         await addSong(music);
-        this.setState({
-          isLoading: false,
-        });
       } else {
         await removeSong(music);
-        this.setState({
-          isLoading: false,
-        }, this.favoriteMusics);
+        this.favoriteMusics();
       }
     });
   };
@@ -54,34 +50,39 @@ export default class CardMusic extends Component {
     const { isLoading, isChecked } = this.state;
 
     return (
-      <div>
+      <div className='cardMusic-container'>
         {
           isLoading === true
             ? <Loading />
             : (
-              <li>
-                <p>
-                  {trackName}
-                </p>
-                <audio data-testid="audio-component" src={ previewUrl } controls>
+              <li className='cardMusic-list-container'>
+                <div className='cardMusic-icon-trackname-label-container'>
+                  <div className='icon-trackname-container'>
+                    <img src={ iconMusic } alt="Music icon" />
+                    <p>{trackName}</p>
+                  </div>
+                  <div className='custom-checkbox'>
+                    <label htmlFor={ trackId }>
+                      <input
+                        type="checkbox"
+                        name="isChecked"
+                        id={ trackId }
+                        checked={ isChecked }
+                        onChange={ this.onChangeHandler }
+                        data-testid={ `checkbox-music-${trackId}` }
+                        className='checkbox-heart'
+                      />
+                      
+                    </label>
+                  </div>
+                </div>
+                <audio data-testid="audio-component" src={ previewUrl } controls className='cardMusic-audio'>
                   <track kind="captions" />
                   O seu navegador não suporta o elemento
                   {' '}
                   <code>audio</code>
                   .
-                </audio>
-
-                <label htmlFor={ trackId }>
-                  <input
-                    type="checkbox"
-                    name="isChecked"
-                    id={ trackId }
-                    checked={ isChecked }
-                    onChange={ this.onChangeHandler }
-                    data-testid={ `checkbox-music-${trackId}` }
-                  />
-                  Favorita
-                </label>
+                </audio>                
               </li>
             )
         }

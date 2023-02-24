@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import CardMusic from '../components/CardMusic';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../css/Favorites.css';
 
 export default class Favorites extends Component {
   constructor() {
@@ -35,13 +36,13 @@ export default class Favorites extends Component {
     const { musicsList, isLoading } = this.state;
 
     return (
-      <div data-testid="page-favorites">
+      <div data-testid="page-favorites" className='favorites-container'>
         <Header />
         {
           isLoading === true
             ? <Loading />
             : (
-              <ul>
+              <ul className='favorites-list'>
                 { musicsList.map((music) => (
                   <CardMusic
                     key={ music.trackId }

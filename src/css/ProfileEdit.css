@@ -1,0 +1,55 @@
+.profileEdit-container {
+  background-color: rgb(26, 25, 25);
+  min-height: 100vh;
+}
+
+.profileEdit-items-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profileEdit-items-container img {
+  width: 80px;
+}
+
+.profileEdit-items {
+  padding: 2vh;
+  color: rgba(255, 255, 255, 0.712);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileEdit-items label {
+  padding: 1vh;
+}
+
+
+.profileEdit-items input {
+  padding: 1vh;
+}
+
+.profileEdit-items input::placeholder {
+  font-size: 0.9em;
+  font-style: italic;
+  color: rgba(128, 128, 128, 0.623);
+}
+
+.profileEdit-items button {
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  height: 5vh;
+  text-transform: uppercase;
+  background-color: rgb(94, 2, 94);
+  margin-top: 4vh;
+}
+
+.profileEdit-items button:disabled{
+  background-color: rgb(34, 33, 36);
+
+}

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import editIcon from '../helpers/edit.svg';
+import '../css/ProfileEdit.css';
 
 export default class ProfileEdit extends Component {
   constructor() {
@@ -89,14 +91,14 @@ export default class ProfileEdit extends Component {
     } = this.state;
 
     return (
-      <div data-testid="page-profile-edit">
+      <div data-testid="page-profile-edit" className='profileEdit-container'>
         <Header />
         {
           isLoading === true
             ? <Loading />
             : (
-              <form action="">
-                <fieldset>
+              <div className='profileEdit-items-container'>
+                <form className='profileEdit-items'>
                   <label htmlFor="userName">
                     Nome
                     <input
@@ -105,6 +107,7 @@ export default class ProfileEdit extends Component {
                       value={ userName }
                       onChange={ this.onChangeHandler }
                       data-testid="edit-input-name"
+                      placeholder='Qual seu nome?'
                     />
                   </label>
 
@@ -116,6 +119,8 @@ export default class ProfileEdit extends Component {
                       value={ userEmail }
                       onChange={ this.onChangeHandler }
                       data-testid="edit-input-email"
+                      placeholder='Qual seu email?'
+
                     />
                   </label>
 
@@ -127,6 +132,8 @@ export default class ProfileEdit extends Component {
                       value={ userDescription }
                       onChange={ this.onChangeHandler }
                       data-testid="edit-input-description"
+                      placeholder='Me fale sobre você?'
+                      maxLength={150}
                     />
                   </label>
 
@@ -138,6 +145,7 @@ export default class ProfileEdit extends Component {
                       value={ userUrl }
                       onChange={ this.onChangeHandler }
                       data-testid="edit-input-image"
+                      placeholder='Qual foto deseja colocar?'
                     />
                   </label>
 
@@ -149,8 +157,9 @@ export default class ProfileEdit extends Component {
                   >
                     Save
                   </button>
-                </fieldset>
-              </form>
+                </form>
+                <img src={ editIcon } alt="Edit icon" />
+              </div>
             )
         }
       </div>
