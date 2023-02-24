@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
+import lupa from '../helpers/lupa.svg';
+import favorite from '../helpers/favorite.svg';
+import profile from '../helpers/profile.svg';
+import '../css/Header.css';
 
 export default class Header extends Component {
   state = {
@@ -24,29 +28,38 @@ export default class Header extends Component {
     const { userName, isLoading } = this.state;
 
     return (
-      <header data-testid="header-component">
-        Header
+      <header data-testid="header-component" className='header-container'>
         {
           isLoading === true
             ? <Loading />
             : (
-              <div data-testid="header-user-name">
-                { userName }
-                <nav>
-                  <ul>
+              <div data-testid="header-user-name" className='header-name'>
+                <p>
+                  { userName }
+                </p>
+                <nav className='header-nav'>
+                  <ul className='header-list'>
                     <li>
-                      <Link data-testid="link-to-search" to="/search">Search</Link>
+                      <Link data-testid="link-to-search" to="/search" className='header-link'>
+                        <img src={ lupa } alt="lupa icon" />
+                        <p>Search</p>
+                      </Link>
                     </li>
                     <li>
                       <Link
                         data-testid="link-to-favorites"
                         to="/favorites"
+                        className='header-link'
                       >
-                        Favorites
+                        <img src={ favorite } alt="favorite icon" />
+                        <p>Favorites</p> 
                       </Link>
                     </li>
                     <li>
-                      <Link data-testid="link-to-profile" to="/profile">Profile</Link>
+                      <Link data-testid="link-to-profile" to="/profile" className='header-link'>
+                        <img src={ profile } alt="profile icon" />
+                        <p>Profile</p>
+                      </Link>
                     </li>
                   </ul>
                 </nav>

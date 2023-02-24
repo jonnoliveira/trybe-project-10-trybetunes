@@ -1,0 +1,76 @@
+.login-page {
+  background: 
+    url(https://wallpaperaccess.com/full/5151257.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40vh;
+  width: 90vw;
+  border-radius: 15px;
+  background-color: rgba(83, 78, 78, 0.907);
+}
+
+.title-login {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  line-height: 5vh;
+}
+
+.title-login h1 {
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(87, 30, 141);
+}
+
+.title-login h2 {
+  font-weight: 300;
+  font-style: italic;
+  align-self: end;
+  color: rgb(73, 26, 117);
+} 
+
+.title-login img {
+  width: 50px;
+  position: absolute;
+  right: 15vw;
+  top: 32vh;
+  filter: drop-shadow(0 0 0.75rem #a000d2);
+} 
+
+.name-login {
+  border-radius: 15px;
+  border: none;
+  padding-left: 2vw;
+  height: 6vh;
+}
+
+.name-login::placeholder {
+  text-align: center;
+  font-style: italic;
+}
+
+.btn-login {
+  width: 90%;
+  border-radius: 15px;
+  height: 6vh;
+  border: none;
+  background-color: rgb(94, 2, 94);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-login:disabled {
+  background-color: rgb(34, 33, 36);
+}

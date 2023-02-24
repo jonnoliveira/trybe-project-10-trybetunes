@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
 import { createUser } from './services/userAPI';
+import './App.css';
 
 class App extends React.Component {
   state = {
@@ -23,6 +24,8 @@ class App extends React.Component {
 
     if (inputNameValue.length >= maxCaract) {
       this.setState({ isDisable: false });
+    } else {
+      this.setState({ isDisable: true });
     }
   };
 
@@ -65,7 +68,6 @@ class App extends React.Component {
 
     return (
       <BrowserRouter>
-        <p>TrybeTunes</p>
         <Switch>
           <Route exact path="/profile/edit" component={ ProfileEdit } />
           <Route exact path="/profile" component={ Profile } />

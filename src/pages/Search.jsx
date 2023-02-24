@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import CardAlbums from '../components/CardAlbums';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../css/Search.css';
 
 let artist = '';
 
@@ -20,6 +21,8 @@ export default class Search extends Component {
 
     if (inputArtist.length >= maxCaract) {
       this.setState({ isDisabledSearch: false });
+    } else {
+      this.setState({ isDisabledSearch: true });
     }
   };
 
@@ -62,11 +65,10 @@ export default class Search extends Component {
     } = this.state;
 
     return (
-      <div data-testid="page-search">
-        Search
+      <div data-testid="page-search" >
         <Header />
-        <div>
-          <form action="">
+        <div className='container-search'>
+          <form action="" className='forms-search'>
             <input
               type="text"
               name="inputArtist"
@@ -74,16 +76,19 @@ export default class Search extends Component {
               value={ inputArtist }
               onChange={ this.onChangeHandlerSearch }
               data-testid="search-artist-input"
+              className='inputArtist'
+              placeholder='NOME DO ARTISTA'
             />
+            <button
+              type="submit"
+              disabled={ isDisabledSearch }
+              onClick={ this.searchBtn }
+              data-testid="search-artist-button"
+              className='search-btn'
+            >
+              Pesquisar
+            </button>
           </form>
-          <button
-            type="submit"
-            disabled={ isDisabledSearch }
-            onClick={ this.searchBtn }
-            data-testid="search-artist-button"
-          >
-            Pesquisar
-          </button>
         </div>
         {
           isLoading === true

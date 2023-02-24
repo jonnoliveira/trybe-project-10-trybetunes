@@ -1,0 +1,40 @@
+.header-container {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.752), rgba(0, 0, 0, 0.5)),
+    url(https://wallpaperaccess.com/full/5151257.jpg);;
+  background-size: cover;
+  height: 20vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-name {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-list li {
+  list-style: none;;
+}
+
+.header-link {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding-top: 2vh;
+}
+
+.header-link img {
+  width: 15px;
+}

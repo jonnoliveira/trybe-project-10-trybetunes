@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import Loading from '../components/Loading';
+import '../css/Login.css';
 
 export default class Login extends Component {
   render() {
@@ -14,31 +15,34 @@ export default class Login extends Component {
       isClicked,
     } = this.props;
 
+
     return (
-      <div data-testid="page-login">
-        Login
-        <form>
-          <fieldset>
-            <div>
-              <input
-                type="text"
-                id="inputName"
-                name="inputNameValue"
-                value={ inputNameValue }
-                placeholder="Digite seu nome de Login"
-                onChange={ onChangeHandler }
-                data-testid="login-name-input"
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={ isDisable }
-              onClick={ requestApi }
-              data-testid="login-submit-button"
-            >
-              Entrar
-            </button>
-          </fieldset>
+      <div data-testid="page-login" className='login-page'>
+        <form className='container-login'>
+          <div className='title-login'>
+            <h1>Trybe</h1>
+            <h2>Tunes</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/5695/5695034.png" alt="music icon" />
+          </div>
+          <input
+            type="text"
+            id="inputName"
+            name="inputNameValue"
+            value={ inputNameValue }
+            placeholder="Qual seu nome?"
+            onChange={ onChangeHandler }
+            data-testid="login-name-input"
+            className='name-login'
+          />
+          <button
+            type="submit"
+            disabled={ isDisable }
+            onClick={ requestApi }
+            data-testid="login-submit-button"
+            className='btn-login'
+           >
+            Entrar
+          </button>
         </form>
         {isLoading && (<Loading />)}
         {(isLoading === false && isClicked) && (<Redirect to="/search" />)}
