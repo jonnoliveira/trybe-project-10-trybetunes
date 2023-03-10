@@ -38,7 +38,7 @@
 
 .profile-info {
   padding: 3vh;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,12 +54,17 @@
   margin-bottom: 2vh;
 }
 
-.profile-info p, .profile-info-description p {
-  font-size: 0.9em;
+.profile-info p {
+  font-size: 0.8em;
+  font-weight: 300;
+  text-align: end;
+}
+
+.profile-info-description p {
+  font-size: 0.8em;
   font-weight: 300;
   text-align: justify;
 }
-
 .profile-info-description {
   padding: 3vh;
   width: 100%;
