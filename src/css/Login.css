@@ -30,14 +30,14 @@
 .title-login h1 {
   font-weight: 600;
   font-style: italic;
-  color: rgb(87, 30, 141);
+  color: rgb(255, 255, 255);
 }
 
 .title-login h2 {
   font-weight: 300;
   font-style: italic;
   align-self: end;
-  color: rgb(73, 26, 117);
+  color: rgb(255, 255, 255);
 } 
 
 .title-login img {
@@ -51,8 +51,9 @@
 .name-login {
   border-radius: 15px;
   border: none;
-  padding-left: 2vw;
   height: 6vh;
+  width: 90%;
+  text-align: center;
 }
 
 .name-login::placeholder {
@@ -83,4 +84,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width : 425px) {
+  .title-login h2 {
+    width: 50%;
+  } 
+}
+
+@media screen and (min-width : 768px) {
+  .container-login {
+    width: 40vw;
+  }
+
+  .title-login h2 {
+    width: 50%;
+  } 
+
+  .title-login img {
+    right: 33vw;
+  } 
+}
+
+@media screen and (min-width : 1024px) {
+  .container-login {
+    width: 30vw;
+  }
+
+  .title-login img {
+    right: 37vw;
+  } 
+}
+
+@media screen and (min-width : 1440px) {
+  .title-login h1 {
+    font-size: 2.5em;
+  } 
+
+  .title-login h2 {
+    font-size: 2em;
+  } 
+  .title-login img {
+    right: 37vw;
+    width: 60px;
+  } 
+
+  .name-login, .name-login::placeholder{
+    font-size: 1.1em;
+  } 
+
+  .btn-login {
+    font-size: 1.2em;
+  }
 }
