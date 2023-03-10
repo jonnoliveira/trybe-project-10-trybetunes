@@ -77,7 +77,7 @@ export default class Search extends Component {
               onChange={ this.onChangeHandlerSearch }
               data-testid="search-artist-input"
               className='inputArtist'
-              placeholder='NOME DO ARTISTA'
+              placeholder='Nome do artista'
             />
             <button
               type="button"

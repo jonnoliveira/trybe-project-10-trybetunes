@@ -50,6 +50,7 @@
 
 .header-link img {
   width: 15px;
+  margin-right: 5px;
 }
 
 .header-loading-container {
@@ -60,4 +61,21 @@
   position: absolute;
   top: 2vw;
   left:40vw
+}
+
+@media screen and (min-width : 1440px) {
+  .header-user-image-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header-user-image-container p {
+    font-size: 1.1em;
+  }
+
+  .header-link {
+    font-size: 1.2em;
+    margin-left: 2vw;
+    margin-top: 4vh;
+  }
 }

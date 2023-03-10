@@ -1,5 +1,6 @@
 .cardMusic-container {
   padding: 1vh;
+  width: 100%;
 }
 
 .cardMusic-icon-trackname-label-container {
@@ -78,4 +79,21 @@
 .checkbox-heart:checked:before,
 .checkbox-heart:checked:after  {
   background-color: rgb(165, 6, 6);
+}
+
+@media screen and (min-width : 768px) {
+  .cardMusic-container {
+    width: 50%;
+    padding: 5vh;
+  }
+}
+
+@media screen and (min-width : 1440px) {
+  .cardMusic-container {
+    width: 30%;
+  }
+
+  .cardMusic-icon-trackname-label-container p {
+    font-size: 1.2em;
+  }
 }

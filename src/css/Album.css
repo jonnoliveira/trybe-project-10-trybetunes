@@ -14,8 +14,6 @@
   height: 30vh;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(53, 51, 51);
-  border-radius: 15px;
 }
 
 .image-album-container {
@@ -24,9 +22,10 @@
   align-items: center;
 }
 
-.image-album-container h1 {
-  font-size: 0.9em;
+.image-album-container h3 {
+  font-size: 0.8em;
   text-align: center;
+  margin-left: 5vw;
 }
 
 .image-album-container img {
@@ -37,7 +36,9 @@
   width: 60%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
+  gap: 3vw;
 }
 
 .icon-artist-container img {
@@ -47,10 +48,40 @@
 .icon-artist-container h4 {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 400;
+  text-align: center;
 }
 
 .album-music-list {
   padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .album-music-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width : 1440px){
+  .image-album-container img {
+    width: 120px
+  }
+
+  .image-album-container h3 {
+    font-size: 1.5em;
+  }
+
+  .icon-artist-container img {
+    width: 25px;
+  }
+  
+  .icon-artist-container h4 {
+    font-size: 1.3em;
+  }
 }

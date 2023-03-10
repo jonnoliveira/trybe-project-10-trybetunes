@@ -1,9 +1,8 @@
 .cardAlbum-container {
-  background-color: rgb(53, 51, 51);
-  border-radius: 15px;
   width: 100%;
   padding: 2vh;
   margin-bottom: 2vh;
+  border-bottom: 1px solid black;
 }
 
 .cardAlbum-link-container {
@@ -11,6 +10,7 @@
   text-decoration: none;
   color: rgba(255, 255, 255, 0.712);
   align-items: center;
+  justify-content: center;
 }
 
 .image-title-cardAlbum {
@@ -29,8 +29,42 @@
 .image-title-cardAlbum  h3 {
   font-size: 0.7em;
   padding-top: 1vh;
+  width: 150px;
 }
 
 .cardAlbum-link-container p {
   font-size: 0.9em;
+  margin-bottom: 5vh;
+}
+
+@media screen and (min-width : 768px) {
+  .cardAlbum-container {
+    width: 50%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  .cardAlbum-container {
+    width: 30%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width : 1440px) {
+  .image-title-cardAlbum  h3 {
+    font-size: 0.9em;
+    padding-top: 1vh;
+    width: 200px;
+  }
+  
+  .cardAlbum-link-container p {
+    font-size: 1em;
+  }
 }
