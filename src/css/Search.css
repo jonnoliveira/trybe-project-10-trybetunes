@@ -60,7 +60,7 @@
 
 .container-search-notFound img {
   width: 70px;
-  filter: drop-shadow(0 0 0.25rem #a000d2);
+  filter: drop-shadow(0 0 0.25rem black);
 }
 
 .container-search-notFound h3{
@@ -68,6 +68,7 @@
   font-weight: 400;
   font-style: italic;
   text-align: center;
+  font-size: 1em;
 }
 
 .container-search-found {

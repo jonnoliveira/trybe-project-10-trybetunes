@@ -6,4 +6,49 @@
 .favorites-list {
   padding: 2vh;
   color: rgba(255, 255, 255, 0.712);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites-notFound-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+
+.favorites-notFound-container img {
+  width: 100px;
+  filter: drop-shadow(0 0 0.25rem rgb(0, 0, 0));
+}
+
+.favorites-notFound-container p {
+  color: rgba(255, 255, 255, 0.712);
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  font-size: 1em;
+}
+
+@media screen and (min-width : 768px) {
+  .favorites-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width : 1440px) {
+  .favorites-notFound-container img {
+    width: 150px;
+
+  }
+  
+  .favorites-notFound-container p {
+    font-size: 1.2em;
+  }
 }

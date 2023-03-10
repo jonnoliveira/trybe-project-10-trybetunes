@@ -22,7 +22,7 @@ export default class Favorites extends Component {
         musicsList: musics,
         isLoading: false,
       });
-    });
+    }); 
   }
 
   async componentDidUpdate() {
@@ -40,20 +40,32 @@ export default class Favorites extends Component {
         <Header />
         {
           isLoading === true
-            ? 
-            (
-              <div className='loading'>
-                <Loading />
-              </div>
-            )
+            && 
+              (
+                <div className='loading'>
+                  <Loading />
+                </div>
+              )
+
+        }
+        {
+          localStorage.getItem('favorite_songs').length === 2
+            ? (
+                <div className='favorites-notFound-container'>
+                  <img src="https://cdn-icons-png.flaticon.com/512/2621/2621165.png" alt="Not Favorites found icon" />
+                  <p> Não encontramos nada aqui ...</p>
+                </div>
+              )
             : (
-              <ul className='favorites-list'>
-                { musicsList.map((music) => (
-                  <CardMusic
-                    key={ music.trackId }
-                    music={ music }
-                  />)) }
-              </ul>
+              (
+                <ul className='favorites-list'>
+                  { musicsList.map((music) => (
+                    <CardMusic
+                      key={ music.trackId }
+                      music={ music }
+                    />)) }
+                </ul>
+              )
             )
         }
       </div>

@@ -83,17 +83,20 @@
 
 @media screen and (min-width : 768px) {
   .cardMusic-container {
-    width: 50%;
+    width: 40%;
+    padding: 5vh;
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  .cardMusic-container {
+    width: 30%;
     padding: 5vh;
   }
 }
 
 @media screen and (min-width : 1440px) {
-  .cardMusic-container {
-    width: 30%;
-  }
-
   .cardMusic-icon-trackname-label-container p {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 }
