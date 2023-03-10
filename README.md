@@ -2,7 +2,7 @@
 
 ## Esse projeto pertence ao módulo de `front-end` do curso da [Trybe](https://www.betrybe.com/) :green_heart:
 
-## :construction: CSS em aprimoramento :construction:
+## Acesse o projeto clicando [aqui](https://jonnoliveira.github.io/trybe-project-10-trybetunes/)! :computer:
  
 <details>
  
@@ -81,9 +81,16 @@ No projeto TrybeTunes, além da componentização, tive a oportunidade de trabal
  
 <summary>
 
-## 4- Preview
+## 4- Preview Mobile
 
 </summary>
 
+![Project-Trybetuns-preview-1](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-1-new.png)
+![Project-Trybetuns-preview-2](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-2-new.png)
+![Project-Trybetuns-preview-3](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-3-new.png)
+![Project-Trybetuns-preview-4](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-4-new.png)
+![Project-Trybetuns-preview-5](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-5-new.png)
+![Project-Trybetuns-preview-6](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-6-new.png)
+![Project-Trybetuns-preview-7](https://github.com/jonnoliveira/trybe-project-10-trybetunes/blob/main/image/Trybetunes-preview-7-new.png)
   
 </details>
