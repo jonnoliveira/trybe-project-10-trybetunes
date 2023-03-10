@@ -60,10 +60,26 @@
 .header-loading {
   position: absolute;
   top: 2vw;
-  left:40vw
+  left: 40vw
+}
+
+@media screen and (min-width : 768px) {
+  .header-loading {
+    left: 45vw
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  .header-loading {
+    left: 47vw
+  }
 }
 
 @media screen and (min-width : 1440px) {
+  .header-loading {
+    left: 48vw
+  }
+
   .header-user-image-container img {
     width: 60px;
     height: 60px;
