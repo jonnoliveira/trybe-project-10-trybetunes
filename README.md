@@ -4,6 +4,16 @@
 
 ## Acesse o projeto clicando [aqui](https://jonnoliveira.github.io/trybe-project-10-trybetunes/)! :computer:
  
+### Stacks utilizadas no desenvolvimento:
+<div style="display: inline_block"><br>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Shield" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Shield" />
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript Shield" />
+   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Shield" />
+</div>
+
+#
+ 
 <details>
  
 <summary>
