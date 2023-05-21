@@ -36,36 +36,36 @@ No projeto TrybeTunes, além da componentização, tive a oportunidade de trabal
 
 </summary>
 
-### I. Crie as rotas necessárias para a aplicação
+* I. Crie as rotas necessárias para a aplicação
 
-### II. Crie um formulário para identificação
+* II. Crie um formulário para identificação
 
-### III. Crie um componente de cabeçalho
+* III. Crie um componente de cabeçalho
 
-### IV. Crie os links de navegação no cabeçalho
+* IV. Crie os links de navegação no cabeçalho
 
-### V. Crie o formulário para pesquisar artistas
+* V. Crie o formulário para pesquisar artistas
 
-### VI. Faça a requisição para pesquisar artistas
+* VI. Faça a requisição para pesquisar artistas
 
-### VII. Crie a lista de músicas do álbum selecionado
+* VII. Crie a lista de músicas do álbum selecionado
 
-### VIII. Crie o mecanismo para adicionar músicas na lista de músicas favoritas
+* VIII. Crie o mecanismo para adicionar músicas na lista de músicas favoritas
 
-### IX. Faça a requisição para recuperar as músicas favoritas ao entrar na página do Álbum
+* IX. Faça a requisição para recuperar as músicas favoritas ao entrar na página do Álbum
 
-### X. Faça a requisição para recuperar as músicas favoritas e atualizar a lista após favoritar uma música
+* X. Faça a requisição para recuperar as músicas favoritas e atualizar a lista após favoritar uma música
 
-### XI. Crie o mecanismo para remover músicas na lista de músicas favoritas
+* XI. Crie o mecanismo para remover músicas na lista de músicas favoritas
 ---
 
 ## Requisitos bônus
 
-### XII. Crie a lista de músicas favoritas
+* XII. Crie a lista de músicas favoritas
 
-### XIII. Crie a exibição de perfil
+* XIII. Crie a exibição de perfil
 
-### XIV. Crie o formulário de edição de perfil
+* XIV. Crie o formulário de edição de perfil
 
 </details>
 
